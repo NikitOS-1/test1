@@ -1,0 +1,24 @@
+.sidebar {
+    header {
+        img {}
+
+        h1 {
+            span {}
+        }
+    }
+
+    .sidebar_label {
+        &:hover {
+            background-color: #5932EA;
+            ;
+        }
+    }
+}
+
+.close {
+    display: none;
+}
+
+.open {
+    display: block;
+}
