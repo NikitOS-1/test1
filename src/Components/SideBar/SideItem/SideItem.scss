@@ -11,14 +11,16 @@
     }
 
     .sidebar_hiden_menu {
+
         .sidebar_hiden_menuItem {
+
             span {}
         }
     }
 }
 
 .open {
-    display: block;
+    display: flex;
 }
 
 .close {
