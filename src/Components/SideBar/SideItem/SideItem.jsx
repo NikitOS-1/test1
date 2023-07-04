@@ -1,6 +1,8 @@
 import { useState } from "react";
-import arrowRight from "../../../Assets/arrowRight.png";
 import "./SideItem.scss";
+
+import arrow from "../../../Assets/arrow.svg";
+
 const SideItem = ({ icon, title, item }) => {
   const [isOpen, setIsOpen] = useState("none");
 
@@ -15,7 +17,22 @@ const SideItem = ({ icon, title, item }) => {
           <img src={icon} alt="icon" className="sidebar_icon" />
           <span>{title}</span>
         </div>
-        <img src={arrowRight} alt="arrow" className={`${isOpen}`} />
+        <svg
+          className={`${isOpen}`}
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6 12L10 8L6 4"
+            // stroke="#9197B3"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        {/* <img src={arrow} alt="arrow" className={`${isOpen}`} /> */}
       </div>
       <div className={"sidebar_hiden_menu"} style={{ display: `${isOpen}` }}>
         {item.map((i) => (

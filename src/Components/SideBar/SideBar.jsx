@@ -8,7 +8,6 @@ import customersIcon from "../../Assets/customers.svg";
 import incomeIcon from "../../Assets/income.svg";
 import promoteIcon from "../../Assets/promote.svg";
 import helpIcon from "../../Assets/help.svg";
-import arrow from "../../Assets/arrow.svg";
 
 const SideBar = () => {
   return (
@@ -20,11 +19,11 @@ const SideBar = () => {
         </h1>
       </header>
       <div className="select-item">
-        <img src={logoIcon} alt="icon" />
+        <img src={dashboardIcon} alt="icon" />
         <span>Dashboard</span>
       </div>
       <SideItem
-        icon={logoIcon}
+        icon={productIcon}
         title="Product"
         item={[
           { name: "Category", link: "#" },
@@ -33,7 +32,7 @@ const SideBar = () => {
         ]}
       />
       <SideItem
-        icon={logoIcon}
+        icon={customersIcon}
         title="Customers"
         item={[
           { name: "All Customers", link: "#" },
@@ -41,7 +40,7 @@ const SideBar = () => {
         ]}
       />
       <SideItem
-        icon={logoIcon}
+        icon={incomeIcon}
         title="Income"
         item={[
           { name: "First", link: "#" },
@@ -49,7 +48,7 @@ const SideBar = () => {
         ]}
       />
       <SideItem
-        icon={logoIcon}
+        icon={promoteIcon}
         title="Promote"
         item={[
           { name: "First", link: "#" },
@@ -57,7 +56,7 @@ const SideBar = () => {
         ]}
       />
       <SideItem
-        icon={logoIcon}
+        icon={helpIcon}
         title="Help"
         item={[
           { name: "Contact", link: "#" },

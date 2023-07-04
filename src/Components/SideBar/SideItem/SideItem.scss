@@ -17,13 +17,23 @@
 
         &:hover {
             background: #5932EA;
-            color: white;
+
+            svg {
+                stroke: white;
+
+            }
 
             .sidebar_container {
                 span {
                     color: white;
                 }
             }
+
+        }
+
+        svg {
+            stroke: #9197B3;
+
         }
 
         .sidebar_container {
@@ -62,6 +72,7 @@
     .sidebar_hiden_menu {
 
         .sidebar_hiden_menuItem {
+            margin: 10px 0px;
             padding: 10px;
             width: 231px;
             height: 24px;
@@ -72,7 +83,6 @@
 
             &:hover {
                 background: #5932EA;
-                color: white;
 
                 span {
                     color: white;
@@ -85,7 +95,7 @@
                 font-weight: 500;
                 line-height: 21px;
                 letter-spacing: -0.01em;
-                color: #9197B3;
+                color: black;
             }
         }
     }
