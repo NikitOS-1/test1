@@ -4,7 +4,11 @@ main {
     max-width: 1440px;
 
     nav {
-        width: 21.3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 306px;
+        height: max-content;
     }
 
     section {

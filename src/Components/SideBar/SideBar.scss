@@ -6,9 +6,9 @@
     box-shadow: 0px 10px 60px 0px #E2ECF980;
 
     header {
+        width: 250px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         margin: 10px 0px 40px 0px;
 
         img {
@@ -33,6 +33,30 @@
                 color: #838383;
                 margin-left: 3px;
             }
+        }
+    }
+
+    .select-item {
+        padding: 10px;
+        width: 231px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+
+        img {
+            width: 24px;
+            height: 24px;
+            margin-right: 13px;
+        }
+
+        span {
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+            letter-spacing: -0.01em;
+            color: #9197B3;
         }
     }
 }
