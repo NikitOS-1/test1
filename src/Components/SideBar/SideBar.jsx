@@ -20,6 +20,14 @@ const SideBar = () => {
           { name: "Sale", link: "#" },
         ]}
       />
+      <SideItem
+        icon={logoIcon}
+        title="Customers"
+        item={[
+          { name: "All Customers", link: "#" },
+          { name: "Active Members", link: "#" },
+        ]}
+      />
     </div>
   );
 };

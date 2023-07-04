@@ -1,18 +1,84 @@
-.sidebar {
-    .sidebar_label {
-        .sidebar_icon {}
+.sidebar_wrraper {
+    width: 250px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-        span {}
+    .sidebar_label {
+        padding: 10px;
+        width: 231px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 8px;
+
+        &:hover {
+            background: #5932EA;
+            color: white;
+
+            .sidebar_container {
+                span {
+                    color: white;
+                }
+            }
+        }
+
+        .sidebar_container {
+            display: flex;
+            align-items: center;
+
+            .sidebar_icon {
+                width: 24px;
+                height: 24px;
+                margin-right: 13px;
+            }
+
+            span {
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 21px;
+                letter-spacing: -0.01em;
+                color: #9197B3;
+            }
+
+        }
 
         //(Fn) isOpen
+        .block {
+            animation-name: rotateAnimation;
+            animation-duration: 0.3s;
+            animation-fill-mode: forwards;
+        }
 
+        .none {}
     }
 
-    .sidebar_hiden_menu {
+    .sidebar_hiden_menu.block {
 
-        .sidebar_hiden_menuItem {
 
-            span {}
+        .sidebar_hiden_menu {
+
+            .sidebar_hiden_menuItem {
+
+                span {}
+            }
         }
     }
 }
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+.none {}
+
+.block {}
