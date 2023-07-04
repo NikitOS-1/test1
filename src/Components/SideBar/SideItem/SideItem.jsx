@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import arrowRight from "../../../Assets/arrowRight.png";
-import Item from "./Item/Item";
 
 const SideItem = ({ icon, title, item }) => {
   const [items, setItems] = useState(item);
@@ -11,19 +10,16 @@ const SideItem = ({ icon, title, item }) => {
   };
 
   return (
-    <div>
+    <div className="sidebar">
       <div className="sidebar_label" onClick={openMenu}>
-        <img src={icon} alt="icon" />
+        <img src={icon} alt="icon" className="sidebar_icon" />
         <span>{title}</span>
         <img src={arrowRight} alt="arrow" className={`arrow_` + `${isOpen}`} />
       </div>
-      <div className={`sidebar_hiden ` + `${isOpen}`}>
-        {items.map((i) => (
+      <div className={`sidebar_hiden_menu ` + `${isOpen}`}>
+        {item.map((i) => (
           <div className="sidebar_hiden_menuItem" key={i.name}>
-            <span>
-              {i.name} link:{i.link}
-            </span>
-            {console.log(i)}
+            <span>{i.name}</span>
           </div>
         ))}
       </div>
