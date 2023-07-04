@@ -26,13 +26,11 @@ const SideItem = ({ icon, title, item }) => {
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M6 12L10 8L6 4"
-            // stroke="#9197B3"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
         </svg>
-        {/* <img src={arrow} alt="arrow" className={`${isOpen}`} /> */}
       </div>
       <div className={"sidebar_hiden_menu"} style={{ display: `${isOpen}` }}>
         {item.map((i) => (
