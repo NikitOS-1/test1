@@ -9,6 +9,7 @@ import customersIcon from "../../Assets/customers.svg";
 import incomeIcon from "../../Assets/income.svg";
 import promoteIcon from "../../Assets/promote.svg";
 import helpIcon from "../../Assets/help.svg";
+import avatar from "../../Assets/avatar.svg";
 
 const SideBar = () => {
   return (
@@ -68,7 +69,7 @@ const SideBar = () => {
         />
       </div>
       <div className="person">
-        <Person />
+        <Person name="Evano" position="Project Manager" avatar={avatar} />
       </div>
     </div>
   );
