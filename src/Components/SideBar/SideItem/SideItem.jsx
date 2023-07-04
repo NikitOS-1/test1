@@ -17,9 +17,7 @@ const SideItem = ({ icon, title, item }) => {
         </div>
         <img src={arrowRight} alt="arrow" className={`${isOpen}`} />
       </div>
-      <div
-        className={"sidebar_hiden_menu " + `${isOpen}`}
-        style={{ display: `${isOpen}` }}>
+      <div className={"sidebar_hiden_menu"} style={{ display: `${isOpen}` }}>
         {item.map((i) => (
           <div className="sidebar_hiden_menuItem" key={i.name}>
             <span>{i.name}</span>

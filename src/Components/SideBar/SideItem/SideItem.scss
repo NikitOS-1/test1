@@ -56,17 +56,39 @@
         .none {}
     }
 
-    .sidebar_hiden_menu.block {
 
 
-        .sidebar_hiden_menu {
+    .sidebar_hiden_menu {
 
-            .sidebar_hiden_menuItem {
+        .sidebar_hiden_menuItem {
+            padding: 10px;
+            width: 231px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 8px;
 
-                span {}
+            &:hover {
+                background: #5932EA;
+                color: white;
+
+                span {
+                    color: white;
+                }
+            }
+
+            span {
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 21px;
+                letter-spacing: -0.01em;
+                color: #9197B3;
             }
         }
     }
+
 }
 
 @keyframes rotateAnimation {
