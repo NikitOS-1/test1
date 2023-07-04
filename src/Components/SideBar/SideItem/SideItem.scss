@@ -5,9 +5,7 @@
         span {}
 
         //(Fn) isOpen
-        .arrow_close {}
 
-        .arrow_open {}
     }
 
     .sidebar_hiden_menu {
@@ -17,12 +15,4 @@
             span {}
         }
     }
-}
-
-.open {
-    display: flex;
-}
-
-.close {
-    display: none;
 }

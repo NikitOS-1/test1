@@ -15,8 +15,9 @@ const SideBar = () => {
         icon={logoIcon}
         title="Product"
         item={[
-          { name: "Product", link: "#" },
-          { name: "Product", link: "#" },
+          { name: "Category", link: "#" },
+          { name: "Favorite", link: "#" },
+          { name: "Sale", link: "#" },
         ]}
       />
     </div>
