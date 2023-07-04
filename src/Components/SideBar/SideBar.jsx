@@ -1,6 +1,5 @@
 import "./SideBar.scss";
 import logoIcon from "../../Assets/logo.png";
-
 import SideItem from "./SideItem/SideItem";
 
 const SideBar = () => {
@@ -12,11 +11,14 @@ const SideBar = () => {
           Dashboard<span>v.01</span>
         </h1>
       </header>
-      <SideItem icon={logoIcon} title="Product" />
-      <SideItem icon={logoIcon} title="Product" />
-      <SideItem icon={logoIcon} title="Product" />
-      <SideItem icon={logoIcon} title="Product" />
-      <SideItem icon={logoIcon} title="Product" />
+      <SideItem
+        icon={logoIcon}
+        title="Product"
+        item={[
+          { name: "Product", link: "#" },
+          { name: "Product", link: "#" },
+        ]}
+      />
     </div>
   );
 };
