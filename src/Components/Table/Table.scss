@@ -1,6 +1,7 @@
 .grid-table {
+    margin-top: 30px;
     width: 100%;
-
+    height: 587px;
 
 
     /* Дополнительные стили для таблицы (например, цвет фона, отступы и т.д.) */
@@ -9,6 +10,8 @@
         display: grid;
         grid-template-columns: repeat(6, 16%);
         grid-gap: 8px;
+        height: 60px;
+        align-content: center;
 
         .grid-header {
             font-family: Poppins;
@@ -26,6 +29,8 @@
         display: grid;
         grid-template-columns: repeat(6, 16%);
         grid-gap: 8px;
+        height: 60px;
+        align-content: center;
 
         .grid-cell {
             font-family: Poppins;
