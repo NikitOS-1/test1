@@ -2,9 +2,10 @@
     margin-top: 50px;
     padding: 30px;
     width: 968px;
-    height: 812px;
+    height: max-content;
     background-color: #FFFFFF;
     box-shadow: 0px 10px 60px 0px #E2ECF980;
+    border-radius: 30px;
 
     .customer_wrapper {
         height: max-content;
@@ -70,5 +71,23 @@
                 }
             }
         }
+    }
+
+    .wrapper_data_nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .count_data {
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+            letter-spacing: -0.01em;
+            color: #B5B7C0;
+            ;
+        }
+
+        .pagination {}
     }
 }
