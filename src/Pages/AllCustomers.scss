@@ -5,4 +5,70 @@
     height: 812px;
     background-color: #FFFFFF;
     box-shadow: 0px 10px 60px 0px #E2ECF980;
+
+    .customer_wrapper {
+        height: max-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+
+            p {
+                font-family: Poppins;
+                font-size: 22px;
+                font-weight: 600;
+                margin: 0px;
+            }
+
+            span {
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 400;
+                color: #16C098;
+
+            }
+        }
+
+        .search {
+            width: 216px;
+            height: 38px;
+            border-radius: 10px;
+            background-color: #F9FBFF;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 24px;
+                height: 24px;
+                margin: 0px 5px;
+            }
+
+            input {
+                margin-right: 5px;
+                width: 100%;
+                background-color: inherit;
+                border: none;
+                font-family: Poppins;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: -0.01em;
+
+                &:focus-visible {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    font-family: Poppins;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: -0.01em;
+                    color: #B5B7C0;
+                    ;
+                }
+            }
+        }
+    }
 }
