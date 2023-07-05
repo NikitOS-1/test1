@@ -27,6 +27,7 @@ const AllCustomers = () => {
             variant="outlined"
             shape="rounded"
             color="secondary"
+            style={{ width: "max-content" }}
           />
         </div>
       </div>
