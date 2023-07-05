@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Table.scss";
+import Status from "./Status/Status";
 
 const Table = () => {
   const data = [
@@ -87,7 +88,7 @@ const Table = () => {
             <div className="grid-cell">{item.PhoneNumber}</div>
             <div className="grid-cell">{item.Email}</div>
             <div className="grid-cell">{item.Country}</div>
-            <div className="grid-cell">{item.Status}</div>
+            <Status status={item.Status} />
           </div>
         </React.Fragment>
       ))}
