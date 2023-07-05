@@ -9,6 +9,7 @@ const Main = () => {
         <SideBar />
       </nav>
       <section>
+        <h1>Hello Evano 👋🏼,</h1>
         <AllCustomers />
       </section>
     </main>

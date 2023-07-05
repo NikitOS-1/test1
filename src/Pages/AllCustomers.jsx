@@ -1,4 +1,6 @@
+import "./AllCustomers.scss";
+
 const AllCustomers = () => {
-  return <div>AllCustomers</div>;
+  return <div className="allCustomers">AllCustomers</div>;
 };
 export default AllCustomers;
