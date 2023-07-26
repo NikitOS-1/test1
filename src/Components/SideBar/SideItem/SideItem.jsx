@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./SideItem.scss";
 
-import arrow from "../../../Assets/arrow.svg";
-
 const SideItem = ({ icon, title, item }) => {
   const [isOpen, setIsOpen] = useState("none");
 
@@ -26,9 +24,9 @@ const SideItem = ({ icon, title, item }) => {
           xmlns="http://www.w3.org/2000/svg">
           <path
             d="M6 12L10 8L6 4"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </div>

@@ -81,7 +81,7 @@ const Table = () => {
         <div className="grid-header">Status</div>
       </div>
       {data.map((item) => (
-        <React.Fragment key={item.id}>
+        <React.Fragment key={item.CustomerName}>
           <div className="wrap-grid-cell">
             <div className="grid-cell">{item.CustomerName}</div>
             <div className="grid-cell">{item.Company}</div>
