@@ -6,6 +6,8 @@
     flex-direction: column;
     margin: 10px 0px;
 
+    @media (max-width:1020px) {}
+
     .sidebar_label {
         padding: 10px;
         width: 231px;
@@ -48,12 +50,17 @@
             }
 
             span {
+
                 font-family: Poppins;
                 font-size: 14px;
                 font-weight: 500;
                 line-height: 21px;
                 letter-spacing: -0.01em;
                 color: #9197B3;
+
+                @media (max-width:1020px) {
+                    display: none;
+                }
             }
 
         }
@@ -112,7 +119,3 @@
         transform: rotate(90deg);
     }
 }
-
-.none {}
-
-.block {}
