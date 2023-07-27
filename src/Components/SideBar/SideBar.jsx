@@ -15,12 +15,12 @@ const SideBar = () => {
   return (
     <div className="sidebar">
       <div>
-        <header>
+        <div className="header">
           <img src={logoIcon} alt="logo" />
           <h1>
             Dashboard<span>v.01</span>
           </h1>
-        </header>
+        </div>
         <div className="select-item">
           <img src={dashboardIcon} alt="icon" />
           <span>Dashboard</span>
