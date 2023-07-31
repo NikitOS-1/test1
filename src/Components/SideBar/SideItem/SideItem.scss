@@ -6,8 +6,6 @@
     flex-direction: column;
     margin: 10px 0px;
 
-    @media (max-width:1020px) {}
-
     .sidebar_label {
         padding: 10px;
         width: 231px;
@@ -57,10 +55,6 @@
                 line-height: 21px;
                 letter-spacing: -0.01em;
                 color: #9197B3;
-
-                @media (max-width:1020px) {
-                    display: none;
-                }
             }
 
         }

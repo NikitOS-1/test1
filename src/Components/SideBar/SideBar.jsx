@@ -20,6 +20,9 @@ const SideBar = () => {
           <h1>
             Dashboard<span>v.01</span>
           </h1>
+          <div className="mob-menu">
+            <span>k</span>
+          </div>
         </div>
         <div className="select-item">
           <img src={dashboardIcon} alt="icon" />
