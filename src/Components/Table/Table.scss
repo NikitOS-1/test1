@@ -22,6 +22,7 @@
     }
 
     .wrap-grid-cell {
+        word-break: break-all;
         border-bottom: 1px solid #EEEEEE;
         display: grid;
         grid-template-columns: repeat(6, 16%);

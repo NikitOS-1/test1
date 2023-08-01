@@ -1,7 +1,7 @@
 .allCustomers {
     margin-top: 50px;
     padding: 30px;
-    width: 968px;
+    width: 100%;
     height: max-content;
     background-color: #FFFFFF;
     box-shadow: 0px 10px 60px 0px #E2ECF980;
@@ -32,7 +32,7 @@
         }
 
         .search {
-            width: 216px;
+            max-width: 216px;
             height: 38px;
             border-radius: 10px;
             background-color: #F9FBFF;

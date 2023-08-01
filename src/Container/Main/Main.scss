@@ -4,15 +4,15 @@ main {
     max-width: 1440px;
 
     nav {
+        width: 28vw;
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
 
     section {
+        width: 68vw;
         padding: 16px 0px 0px 60px;
-        width: 1134px;
         background: #FAFBFF;
 
         h1 {

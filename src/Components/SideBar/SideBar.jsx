@@ -14,7 +14,7 @@ import avatar from "../../Assets/avatar.svg";
 const SideBar = () => {
   return (
     <div className="sidebar">
-      <div>
+      <div className="wrap-item-menu">
         <div className="header">
           <img src={logoIcon} alt="logo" />
           <h1>
