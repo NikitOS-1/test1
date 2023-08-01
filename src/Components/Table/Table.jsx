@@ -1,75 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Table.scss";
 import Status from "./Status/Status";
+import axios from "axios";
+
+const BASE_URL = "http://hn.algolia.com/api/v1/search?";
 
 const Table = () => {
-  const data = [
-    {
-      CustomerName: "Jane Cooper",
-      Company: "Microsoft",
-      PhoneNumber: "(225) 555-0118",
-      Email: "jane@microsoft.com",
-      Country: "United States",
-      Status: "Active",
-    },
-    {
-      CustomerName: "Floyd Miles",
-      Company: "Yahoo",
-      PhoneNumber: "(205) 555-0100",
-      Email: "floyd@yahoo.com",
-      Country: "Kiribati",
-      Status: "Inactive",
-    },
-    {
-      CustomerName: "Ronald Richards",
-      Company: "Adobe",
-      PhoneNumber: "(302) 555-0107",
-      Email: "ronald@adobe.com",
-      Country: "Israel",
-      Status: "Inactive",
-    },
-    {
-      CustomerName: "Marvin McKinney",
-      Company: "Tesla",
-      PhoneNumber: "(252) 555-0126",
-      Email: "marvin@tesla.com",
-      Country: "Iran",
-      Status: "Active",
-    },
-    {
-      CustomerName: "Jerome Bell",
-      Company: "Google",
-      PhoneNumber: "(629) 555-0129",
-      Email: "jerome@google.com",
-      Country: "Réunion",
-      Status: "Active",
-    },
-    {
-      CustomerName: "Kathryn Murphy",
-      Company: "Microsoft",
-      PhoneNumber: "(406) 555-0120",
-      Email: "kathryn@microsoft.com",
-      Country: "Curaçao",
-      Status: "Active",
-    },
-    {
-      CustomerName: "Jacob Jones",
-      Company: "Yahoo",
-      PhoneNumber: "(208) 555-0112",
-      Email: "jacob@yahoo.com",
-      Country: "Brazil",
-      Status: "Active",
-    },
-    {
-      CustomerName: "Kristin Watson",
-      Company: "Facebook",
-      PhoneNumber: "(704) 555-0127",
-      Email: "kristin@facebook.com",
-      Country: "Åland Islands",
-      Status: "Inactive",
-    },
-  ];
-
+  const [post, setPost] = useState([]);
+  const [query, setQuery] = useState("react");
+  const [page, setPage] = useState(1);
+  const [pageQty, setPageQty] = useState(0);
+  useEffect(() => {
+    axios.get(BASE_URL + `query=${query}&page=${page - 1}`).then((data) => {
+      setPost(data.data.hits);
+      setPageQty(data.data.nbPages);
+    });
+  }, []);
   return (
     <div className="grid-table">
       <div className="wrap-grid-header">
@@ -80,7 +26,7 @@ const Table = () => {
         <div className="grid-header">Country</div>
         <div className="grid-header">Status</div>
       </div>
-      {data.map((item) => (
+      {/* {data.map((item) => (
         <React.Fragment key={item.CustomerName}>
           <div className="wrap-grid-cell">
             <div className="grid-cell">{item.CustomerName}</div>
@@ -91,7 +37,7 @@ const Table = () => {
             <Status status={item.Status} />
           </div>
         </React.Fragment>
-      ))}
+      ))} */}
     </div>
   );
 };
