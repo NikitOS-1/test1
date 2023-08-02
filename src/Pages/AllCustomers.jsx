@@ -16,8 +16,10 @@ const AllCustomers = () => {
   useEffect(() => {
     axios.get(BASE_URL + `?_page=${page}&_limit=8`).then((res) => {
       setTodo(res.data);
+      let data = [...todo];
       if (search) {
-        console.log(search);
+        data = data.filter((c) => c.id == search);
+        setTodo(data);
       }
     });
   }, [page, search]);
