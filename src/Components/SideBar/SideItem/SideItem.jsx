@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./SideItem.scss";
+import { Link } from "react-router-dom";
 
 const SideItem = ({ icon, title, item }) => {
   const [isOpen, setIsOpen] = useState("none");
@@ -33,7 +34,9 @@ const SideItem = ({ icon, title, item }) => {
       <div className={"sidebar_hiden_menu"} style={{ display: `${isOpen}` }}>
         {item.map((i) => (
           <div className="sidebar_hiden_menuItem" key={i.name}>
-            <span>{i.name}</span>
+            <span>
+              <Link to={i.link}>{i.name}</Link>
+            </span>
           </div>
         ))}
       </div>

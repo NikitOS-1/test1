@@ -38,8 +38,8 @@ const SideBar = () => {
           icon={customersIcon}
           title="Customers"
           item={[
-            { name: "All Customers", link: "#" },
-            { name: "Active Members", link: "#" },
+            { name: "All Customers", link: "/customers" },
+            { name: "Active Members", link: "/" },
           ]}
         />
         <SideItem

@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import SideBar from "../../Components/SideBar/SideBar";
 import AllCustomers from "../../Pages/AllCustomers";
 import "./Main.scss";
@@ -10,7 +11,9 @@ const Main = () => {
       </nav>
       <section>
         <h1>Hello Evano 👋🏼,</h1>
-        <AllCustomers />
+        <Routes>
+          <Route path="/customers" element={<AllCustomers />} />
+        </Routes>
       </section>
     </main>
   );
