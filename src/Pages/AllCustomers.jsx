@@ -5,20 +5,22 @@ import { Pagination } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const BASE_URL = "http://hn.algolia.com/api/v1/search?";
+const BASE_URL = "https://jsonplaceholder.typicode.com/posts";
 
 const AllCustomers = () => {
-  const [post, setPost] = useState([]);
-  const [query, setQuery] = useState("react");
+  const [todo, setTodo] = useState([]);
   const [page, setPage] = useState(1);
-  const [pageQty, setPageQty] = useState(0);
+  const [pageQty, setPageQty] = useState(13);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
-    axios.get(BASE_URL + `query=${query}&page=${page - 1}`).then((data) => {
-      setPost(data.data.hits);
-      setPageQty(data.data.nbPages);
+    axios.get(BASE_URL + `?_page=${page}&_limit=8`).then((res) => {
+      setTodo(res.data);
+      if (search) {
+        console.log(search);
+      }
     });
-  }, [query, page]);
+  }, [page, search]);
 
   return (
     <div className="allCustomers">
@@ -29,15 +31,20 @@ const AllCustomers = () => {
         </div>
         <div className="search">
           <img src={searchIcon} alt="search" />
-          <input type="text" placeholder="Search" />
+          <input
+            type="text"
+            placeholder="Search"
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </div>
       </div>
-      <Table post={post} />
+      <Table todo={todo} search={search} />
       <div className="wrapper_data_nav">
         <div className="count_data">
           <span>Showing data 1 to 8 of 256K entries</span>
         </div>
         <div className="pagination">
+          {/* {!!pageQty && ( */}
           <Pagination
             count={pageQty}
             page={page}
@@ -47,6 +54,7 @@ const AllCustomers = () => {
             onChange={(_, num) => setPage(num)}
             style={{ width: "max-content" }}
           />
+          {/* )} */}
         </div>
       </div>
     </div>

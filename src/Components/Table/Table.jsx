@@ -2,12 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Table.scss";
 import Status from "./Status/Status";
 
-const Table = ({ post }) => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    setData(post);
-  }, []);
-  console.log(data);
+const Table = ({ todo }) => {
   return (
     <div className="grid-table">
       <div className="wrap-grid-header">
@@ -18,15 +13,15 @@ const Table = ({ post }) => {
         <div className="grid-header">Country</div>
         <div className="grid-header">Status</div>
       </div>
-      {data.map((item) => (
-        <React.Fragment>
+      {todo.map((item) => (
+        <React.Fragment key={item.id}>
           <div className="wrap-grid-cell">
+            <div className="grid-cell">{item.userId}</div>
+            <div className="grid-cell">{item.title}</div>
+            <div className="grid-cell">{item.id}</div>
             <div className="grid-cell">{}</div>
             <div className="grid-cell">{}</div>
-            <div className="grid-cell">{}</div>
-            <div className="grid-cell">{}</div>
-            <div className="grid-cell">{}</div>
-            <Status />
+            <Status status={item.completed} />
           </div>
         </React.Fragment>
       ))}
