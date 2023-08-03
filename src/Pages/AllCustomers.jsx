@@ -11,18 +11,27 @@ const AllCustomers = () => {
   const [todo, setTodo] = useState([]);
   const [page, setPage] = useState(1);
   const [pageQty, setPageQty] = useState(13);
-  const [search, setSearch] = useState("");
+  const [enteredSearch, setEnteredSearch] = useState("");
+  const [activeSearch, setActiveSearch] = useState("");
 
   useEffect(() => {
-    axios.get(BASE_URL + `?_page=${page}&_limit=8`).then((res) => {
-      setTodo(res.data);
-      let data = [...todo];
-      if (search) {
-        data = data.filter((c) => c.id == search);
-        setTodo(data);
-      }
-    });
-  }, [page, search]);
+    let handlers = setTimeout(() => {
+      axios.get(BASE_URL + `?_page=${page}&_limit=8`).then((res) => {
+        setTodo(res.data);
+        let dataFilter = [...todo];
+        if (activeSearch) {
+          dataFilter = dataFilter.filter((i) => i.id == activeSearch);
+          setTodo(dataFilter);
+        }
+      });
+    }, 301);
+  }, [page, activeSearch]);
+
+  useEffect(() => {
+    let handler = setTimeout(() => {
+      setActiveSearch(enteredSearch);
+    }, 300);
+  }, [enteredSearch]);
 
   return (
     <div className="allCustomers">
@@ -36,11 +45,11 @@ const AllCustomers = () => {
           <input
             type="text"
             placeholder="Search"
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => setEnteredSearch(e.target.value)}
           />
         </div>
       </div>
-      <Table todo={todo} search={search} />
+      <Table todo={todo} search={activeSearch} />
       <div className="wrapper_data_nav">
         <div className="count_data">
           <span>Showing data 1 to 8 of 256K entries</span>
