@@ -13,7 +13,6 @@ const AllCustomers = () => {
   const [pageQty, setPageQty] = useState(13);
   const [enteredSearch, setEnteredSearch] = useState("");
   const [activeSearch, setActiveSearch] = useState("");
-  const [activeSearch, setActiveSearch] = useState("");
 
   useEffect(() => {
     let handlers = setTimeout(() => {
